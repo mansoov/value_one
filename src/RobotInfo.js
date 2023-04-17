@@ -16,8 +16,8 @@ const RobotInfo = () => {
           return;
         }
 
-    // const response = await axios.get('http://127.0.0.1:8000/robot-service/robots');       
-    const response = await axios.get('http://3.37.11.78:8000/robot-service/robots');       
+    const response = await axios.get('http://127.0.0.1:8000/robot-service/robots');       
+    // const response = await axios.get('http://3.37.11.78:8000/robot-service/robots');       
     const data = response.data;
 
     // 만약 받아온 데이터가 객체이면, 배열 형태로 변환합니다.

@@ -24,6 +24,21 @@ function SignUp() {
     const onSubmitHandler = async (event) => {
         event.preventDefault();
 
+        if (!Name.trim()) {
+            alert('이름을 입력해주세요.');
+            return;
+        }
+
+        if (!Email.trim()) {
+            alert('Email 입력해주세요.');
+            return;
+        }
+
+        if (!Pwd.trim()) {
+            alert('Pwd 입력해주세요.');
+            return;
+        }
+
         const userData = {
             email: Email,
             name: Name,
@@ -33,8 +48,8 @@ function SignUp() {
         console.log('Submitting user data to the REST API:', userData);
 
         try {
-            // const response = await axios.post('http://127.0.0.1:8000/user-service/users', userData);
-            const response = await axios.post('http://3.37.11.78:8000/user-service/users', userData);
+            const response = await axios.post('http://127.0.0.1:8000/user-service/users', userData);
+            // const response = await axios.post('http://3.37.11.78:8000/user-service/users', userData);
             console.log(response);
 
             // setEmail('');
