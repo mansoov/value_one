@@ -48,8 +48,8 @@ function SignUp() {
         console.log('Submitting user data to the REST API:', userData);
 
         try {
-            const response = await axios.post('http://127.0.0.1:8000/user-service/users', userData);
-            // const response = await axios.post('http://3.37.11.78:8000/user-service/users', userData);
+            // const response = await axios.post('http://127.0.0.1:8000/user-service/users', userData);
+            const response = await axios.post('http://3.37.11.78:8000/user-service/users', userData);
             console.log(response);
 
             // setEmail('');

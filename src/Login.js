@@ -19,8 +19,8 @@ const Login = () => {
       };
     
         try {
-          const response = await axios.post('http://127.0.0.1:8000/user-service/login', userData);
-          // const response = await axios.post('http://3.37.11.78:8000/user-service/login', userData);
+          // const response = await axios.post('http://127.0.0.1:8000/user-service/login', userData);
+          const response = await axios.post('http://3.37.11.78:8000/user-service/login', userData);
           
           console.log('Submitting user data to Login:', userData);
           // 토큰이 있는 경우 인증 성공으로 처리
